@@ -1,0 +1,15 @@
+import time
+from adb_shell.adb_device import AdbDeviceTcp
+
+# Connect to the Android device
+device = AdbDeviceTcp('192.168.0.1', 5555)
+device.connect()
+
+# Simulate clicking on the close button of the ad
+def close_ad():
+    device.shell("input tap x_coordinate y_coordinate")  # Replace with the coordinates of the close button
+
+# Close the ad every 10 seconds
+while True:
+    close_ad()
+    time.sleep(10)

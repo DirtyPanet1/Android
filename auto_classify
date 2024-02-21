@@ -1,0 +1,17 @@
+def auto_classify(data):
+    classes = {}
+
+    for item in data:
+        if item in classes:
+            classes[item].append(item)
+        else:
+            classes[item] = [item]
+
+    return classes
+
+# 示例用法
+data = ["apple", "banana", "apple", "orange", "banana", "apple"]
+result = auto_classify(data)
+print("Classified data:")
+for key, value in result.items():
+    print(key, ":", value)

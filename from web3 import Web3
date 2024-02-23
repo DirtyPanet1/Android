@@ -1,0 +1,3 @@
+w3 = Web3(Web3.HTTPProvider('http://localhost:8545'))
+block_number = w3.eth.blockNumber
+print("XXX：", block_number)
